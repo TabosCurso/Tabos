@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Tabos - Síntese Cinemática</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estilo da página */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7fbe7;
+            color: #3d543c;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            padding: 20px;
+        }
+
+        /* Seção 1 - Header */
+        .header-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #f7fbe7;
+            padding: 40px 0;
+            flex-wrap: wrap;
+        }
+
+        .header-text {
+            max-width: 50%;
+        }
+
+        .header-text h1 {
+            font-size: 48px;
+            color: #2e5a33;
+            margin-bottom: 20px;
+        }
+
+        .header-text p {
+            font-size: 18px;
+            color: #5a7a55;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .header-image img {
+            border-radius: 10px;
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+        }
+
+        /* Seção 2 - Curso */
+        .course-section {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 40px 0;
+            flex-wrap: wrap;
+        }
+
+        .course-image img {
+            border-radius: 10px;
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+        }
+
+        .course-content {
+            max-width: 50%;
+        }
+
+        .course-content h2 {
+            font-size: 36px;
+            color: #2e5a33;
+            margin-bottom: 10px;
+        }
+
+        .course-content p {
+            font-size: 18px;
+            color: #5a7a55;
+            margin-bottom: 20px;
+        }
+
+        /* Seção 3 - Depoimento */
+.testimonial-section {
+    background-color: #3b3b3b;
+    color: #ffffff;
+    padding: 40px 20px;
+    border-radius: 10px;
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+    margin: 40px auto; /* Centraliza a seção */
+    position: relative;
+    overflow: hidden;
+}
+
+        .testimonial-quote {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .author-info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+        }
+
+        .author-info img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* Seção 4 - Depoimento adicional */
+        .extra-testimonial {
+            background-color: #f7fbe7;
+            color: #3d543c;
+            padding: 40px 20px;
+            text-align: center;
+            max-width: 900px;
+            margin: 40px auto;
+        }
+
+        .extra-testimonial p {
+            font-size: 20px;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .extra-testimonial span {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        /* Botão Comprar */
+        .buy-button {
+            display: block;
+            width: fit-content;
+            margin: 0 auto 40px;
+            background-color: #2e5a33;
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        /* Rodapé */
+        .footer {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            padding: 20px 0;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .header-section, .course-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .header-text, .course-content {
+                max-width: 100%;
+            }
+
+            .header-text h1 {
+                font-size: 36px;
+            }
+
+            .course-content h2 {
+                font-size: 28px;
+            }
+
+            .cta-button, .buy-button {
+                font-size: 16px;
+                padding: 8px 16px;
+            }
+
+            .testimonial-quote {
+                font-size: 20px;
+            }
+
+            .author-info {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-text h1 {
+                font-size: 28px;
+            }
+
+            .course-content h2 {
+                font-size: 24px;
+            }
+
+            .testimonial-quote {
+                font-size: 18px;
+            }
+
+            .author-info {
+                font-size: 16px;
+            }
+        }
+.testimonial-box {
+    background-color: #e8f5e9; /* Verde claro */
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.stars {
+    font-size: 24px;
+    color: #ffb300; /* Cor das estrelas */
+    margin-bottom: 10px;
+}
+
+.testimonial-text {
+    font-size: 18px;
+    color: #3d543c;
+    margin-bottom: 15px;
+}
+
+.testimonial-button {
+    background-color: #2e5a33; /* Cor do botão */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+       <!-- Seção 1: Introdução do curso -->
+<div class="header-section">
+    <div class="header-text">
+        <h1>Avance na sua carreira com Tabos</h1>
+        <p>Curso prático online que ensina a síntese cinemática de mecanismos usando GeoGebra e SolidWorks. Ideal para estudantes e profissionais de engenharia que desejam dominar técnicas modernas de projeto.</p>
+        <a href="#" class="cta-button">Acesse Agora</a>
+        
+        <!-- Seção de depoimento com estrelas -->
+        <div class="testimonial-box">
+            <div class="stars">
+                ★★★★★
+            </div>
+            <p class="testimonial-text">"O curso Tabos foi uma virada de chave na minha carreira. Aprendi muito!" - <span>Maria Silva</span></p>
+            <a href="#" class="cta-button testimonial-button">Saiba Mais</a>
+        </div>
+    </div>
+    <div class="header-image">
+        <img src="https://images.unsplash.com/photo-1581092446327-9b52bd1570c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMzczODV8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MzAyMzk3NjF8&ixlib=rb-4.0.3&q=80&w=1080" alt="Imagem do curso">
+    </div>
+</div>
+<!-- Seção 2.1: Aumente suas oportunidades de carreira -->
+<div class="course-section">
+    <div class="course-content">
+        <h2>Aumente suas oportunidades de carreira</h2>
+        <p>No mercado de trabalho atual, é essencial estar atualizado com as mais recentes técnicas e ferramentas de engenharia. O curso Tabos oferece um caminho claro para evitar as dores de cabeça associadas ao aprendizado de novos softwares de forma autodidata. Com um currículo estruturado e suporte de especialistas, você poderá adquirir conhecimentos valiosos que aumentarão suas oportunidades de carreira. Aprender a síntese cinemática de mecanismos com GeoGebra e SolidWorks não só aprimora suas habilidades técnicas, mas também demonstra aos empregadores sua capacidade de adaptação e inovação.</p>
+    </div>
+    <div class="course-image">
+        <img src="https://images.unsplash.com/photo-1581092335331-5e00ac65e934?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMzczODV8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MzAyMzk3NjF8&ixlib=rb-4.0.3&q=80&w=1080" alt="Imagem de carreira"> <!-- Substitua pelo caminho da imagem -->
+    </div>
+</div>
+
+<!-- Seção 2.2: Transforme suas ideias em realidade -->
+<div class="course-section">
+    <div class="course-image">
+        <img src="https://images.unsplash.com/photo-1581093687571-a70d2bd979e4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMzczODV8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MzAyMzk3NjF8&ixlib=rb-4.0.3&q=80&w=1080" alt="Imagem de transformação de ideias"> <!-- Substitua pelo caminho da imagem -->
+    </div>
+    <div class="course-content">
+        <h2>Transforme suas ideias em realidade</h2>
+        <p>O curso Tabos oferece um plano detalhado para ajudá-lo a transformar suas ideias em projetos reais. Com um enfoque prático, você aprenderá a aplicar conceitos teóricos em situações reais, desenvolvendo mecanismos eficientes e inovadores. O uso de GeoGebra e SolidWorks permitirá que você visualize e modele suas ideias com precisão, facilitando a comunicação e a colaboração com colegas e superiores. Ao final do curso, você terá a confiança necessária para enfrentar projetos desafiadores e contribuir significativamente para sua área de atuação.</p>
+    </div>
+</div>
+
+        <!-- Seção 3: Depoimento -->
+        <div class="testimonial-section">
+            <p class="testimonial-quote">
+                "Este curso revolucionou minha forma de trabalhar com mecanismos, tornando-me mais eficiente e inovador."
+            </p>
+            <div class="author-info">
+                <img src="https://storage.googleapis.com/mixo-files/public/img/avatars/male-28.png" alt="Foto do autor"> <!-- Substitua pelo caminho da imagem do autor -->
+                <span>David Ramirez</span>
+            </div>
+        </div>
+
+<!-- Seção 4: Depoimento adicional e botão de compra -->
+<div class="extra-testimonial" style="border: 2px solid #2e5a33; border-radius: 10px; padding: 20px; background-color: #ffffff;">
+    <h2 style="font-size: 32px; color: #2e5a33; margin-bottom: 20px;">Comece com Tabos hoje</h2>
+    <p>“Tabos é um curso excelente para quem deseja se aprofundar em técnicas modernas de engenharia. A abordagem prática e o uso de ferramentas avançadas são simplesmente incríveis.” - <span>Daniel Celito</span></p>
+</div>
+
+        <a href="#" class="buy-button">Comprar o Curso</a>
+
+        <!-- Rodapé com ícones de redes sociais -->
+        <div class="footer">
+            <a href="https://facebook.com/taboscurso" target="_blank"><img src="facebook-icon.png" alt="Facebook" class="social-icon"></a>
+            <a href="https://instagram.com/taboscurso" target="_blank"><img src="instagram-icon.png" alt="Instagram" class="social-icon"></a>
+            <a href="https://tiktok.com/@taboscurso" target="_blank"><img src="tiktok-icon.png" alt="TikTok" class="social-icon"></a>
+        </div>
+    </div>
+</body>
+</html>
+
